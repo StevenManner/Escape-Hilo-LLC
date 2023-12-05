@@ -25,14 +25,7 @@
                     
                 </div>
             </button>
-               <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    
-                </div>
-            </button>
+              
             
 
          
@@ -40,6 +33,15 @@
             <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li " >
+
+                            <!-- Similarly, if the link is active, apply the necessary classes -->
+                            <a href="https://fareharbor.com/embeds/book/escapehilo/items/66958/calendar/?flow=6078&language=en-us&full-items=yes&back=https://escapehilo.com/&g4=yes" class="cs-li-link ">
+                                Buy Gift Cards
+                                
+                        
+                            </a>
+                            
                     {% set navPages = collections.all | eleventyNavigation %}
                     <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
                     {% for entry in navPages %}
@@ -55,6 +57,7 @@
                                 {% if hasChild %}
                                     <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                                 {% endif %}
+                            
                             </a>
 
                             <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
@@ -63,16 +66,18 @@
                                     {% for child in entry.children %}
                                         <li class="cs-drop-li">
                                             <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
+                                            
                                         </li>
+                             
                                     {% endfor %}
                                 </ul>
                             {% endif %}
                         </li>
                     {% endfor %}
-                     <a href="https://fareharbor.com/embeds/book/escapehilo/items/66958/?full-items=yes&flow=6078&language=en-us&u=76889c42-80bc-4719-84d1-be81e3f11962&from-ssl=yes&ga4t=G-PN5EGMFBNR,582807133.1694811056__1695764458%3B&g4=yes&cp=no&csp=no&back=https://escapehilo.com/" class="cs-button-solid cs-nav-button">Buy Gift Cards</a>
                 </ul>
             </div>
         </nav>
+        
         <a href="https://fareharbor.com/embeds/book/escapehilo/items/58566/?full-items=yes" class="cs-button-solid cs-nav-button">Book Now</a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <button id="dark-mode-toggle" aria-label="dark mode toggle">
